@@ -12,6 +12,8 @@
 		2468A4022CB2E66A00C640BF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468A4012CB2E66A00C640BF /* Item.swift */; };
 		2468A4042CB2E66A00C640BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2468A4032CB2E66A00C640BF /* Assets.xcassets */; };
 		2468A4082CB2E66A00C640BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2468A4072CB2E66A00C640BF /* Preview Assets.xcassets */; };
+		2468A4102CB2E6A900C640BF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2468A40F2CB2E6A900C640BF /* Alamofire */; };
+		2468A4122CB3B26B00C640BF /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468A4112CB3B26B00C640BF /* KeyboardResponder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2468A4032CB2E66A00C640BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2468A4052CB2E66A00C640BF /* YummieBot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YummieBot.entitlements; sourceTree = "<group>"; };
 		2468A4072CB2E66A00C640BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2468A4112CB3B26B00C640BF /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		2468A4142CB3BC4900C640BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2468A4102CB2E6A900C640BF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +59,14 @@
 		2468A3FC2CB2E66A00C640BF /* YummieBot */ = {
 			isa = PBXGroup;
 			children = (
+				2468A4142CB3BC4900C640BF /* Info.plist */,
 				2468A3FD2CB2E66A00C640BF /* YummieBotApp.swift */,
 				2468A3FF2CB2E66A00C640BF /* ContentView.swift */,
 				2468A4012CB2E66A00C640BF /* Item.swift */,
 				2468A4032CB2E66A00C640BF /* Assets.xcassets */,
 				2468A4052CB2E66A00C640BF /* YummieBot.entitlements */,
 				2468A4062CB2E66A00C640BF /* Preview Content */,
+				2468A4112CB3B26B00C640BF /* KeyboardResponder.swift */,
 			);
 			path = YummieBot;
 			sourceTree = "<group>";
@@ -88,6 +95,9 @@
 			dependencies = (
 			);
 			name = YummieBot;
+			packageProductDependencies = (
+				2468A40F2CB2E6A900C640BF /* Alamofire */,
+			);
 			productName = YummieBot;
 			productReference = 2468A3FA2CB2E66A00C640BF /* YummieBot.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 2468A3F12CB2E66A00C640BF;
+			packageReferences = (
+				2468A40E2CB2E6A900C640BF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2468A3FB2CB2E66A00C640BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2468A4002CB2E66A00C640BF /* ContentView.swift in Sources */,
+				2468A4122CB3B26B00C640BF /* KeyboardResponder.swift in Sources */,
 				2468A4022CB2E66A00C640BF /* Item.swift in Sources */,
 				2468A3FE2CB2E66A00C640BF /* YummieBotApp.swift in Sources */,
 			);
@@ -274,8 +288,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YummieBot/Preview Content\"";
+				DEVELOPMENT_TEAM = QPUG98H89L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YummieBot/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -294,7 +310,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.llm.YummieBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,8 +327,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YummieBot/Preview Content\"";
+				DEVELOPMENT_TEAM = QPUG98H89L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YummieBot/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -330,7 +349,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.llm.YummieBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2468A40E2CB2E6A900C640BF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2468A40F2CB2E6A900C640BF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2468A40E2CB2E6A900C640BF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2468A3F22CB2E66A00C640BF /* Project object */;
 }
